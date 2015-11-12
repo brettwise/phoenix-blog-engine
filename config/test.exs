@@ -19,3 +19,5 @@ config :pxblog, Pxblog.Repo,
   password: "postgres",
   database: "pxblog_test",
   pool: Ecto.Adapters.SQL.Sandbox
+
+config :comeonin, bcrypt_log_rounds: 4
