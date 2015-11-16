@@ -7,6 +7,7 @@ defmodule Pxblog.User do
     field :username, :string
     field :email, :string
     field :password_digest, :string
+    has_many :posts, Pxblog.Post
 
     timestamps
     # Virtual Fields
@@ -35,6 +36,6 @@ defmodule Pxblog.User do
       |> put_change(:password_digest, hashpwsalt(password))
     else
       changeset
-    end  
+    end
   end
 end
